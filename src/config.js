@@ -6,22 +6,26 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "CodeMedics Colorado";
+const description = "This is the Colorado CodeMedics collection. My first attempt at NFT generation.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 256,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Body" },
+      { name: "Eyes" },
+      { name: "Hair" },
+      { name: "Suit" },
+      { name: "Rank" },
+      { name: "Belt" },
+      { name: "T Shirts" },
+      { name: "Hands" },
+      { name: "Accessories" },
+      { name: "Steth" },
     ],
   },
 ];
@@ -31,27 +35,27 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1500,
+  height: 1500,
   smoothing: false,
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://www.blubear.cat/codemedics", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
 // ** REQUIRED **
-const AUTH = "YOUR API KEY HERE";
+const AUTH = "a7b3b9e3-cd2c-4b30-9af7-cfd1c5a520be";
 const LIMIT = 2; // Your API key rate limit
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
+const CONTRACT_NAME = 'Colorado CodeMedics';
+const CONTRACT_SYMBOL = 'CCM';
 const CONTRACT_TYPE = 'erc721';
-const MINT_TO_ADDRESS = 'YOUR WALLET ADDRESS HERE';
+const MINT_TO_ADDRESS = '0x937C8fc9acbADB62a543427862c12Ab633dE9Ed2';
 const CHAIN = 'rinkeby';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
+const ROYALTY_ADDRESS = "0x937C8fc9acbADB62a543427862c12Ab633dE9Ed2"; // Address that will receive the royalty
 // ** OPTIONAL **
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 // Generic Metadata is optional if you want to reveal your NFTs
@@ -61,7 +65,7 @@ const GENERIC_DESCRIPTION = "Unknown"; // Replace with what you want the generic
 const GENERIC_IMAGE = [
   "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh",
 ]; // Replace with your generic image(s). If multiple, separate with a comma.
-const REVEAL_PROMPT = true; // Set to false if you want to disable the prompt to confirm each reveal.
+const REVEAL_PROMPT = false; // Set to false if you want to disable the prompt to confirm each reveal.
 const INTERVAL = 900000; // Milliseconds. This is the interval for it to check for sales and reveal the NFT. 900000 = 15 minutes.
 
 // Automatically set contract address if deployed using the deployContract.js script
