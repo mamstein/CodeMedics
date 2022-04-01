@@ -19,7 +19,7 @@ const layerConfigurations = [
       { name: "Body" },
       { name: "Eyes" },
       { name: "Hair" },
-      { name: "Suit" },
+      { name: "Suits" },
       { name: "Rank" },
       { name: "Belt" },
       { name: "T Shirts" },
@@ -52,8 +52,8 @@ const CONTRACT_NAME = 'Colorado CodeMedics';
 const CONTRACT_SYMBOL = 'CCM';
 const CONTRACT_TYPE = 'erc721';
 const MINT_TO_ADDRESS = '0x937C8fc9acbADB62a543427862c12Ab633dE9Ed2';
-const CHAIN = 'rinkeby';
-const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
+const CHAIN = 'polygon';
+const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x937C8fc9acbADB62a543427862c12Ab633dE9Ed2"; // Address that will receive the royalty
 // ** OPTIONAL **
