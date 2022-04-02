@@ -46,7 +46,7 @@ const extraMetadata = {
 
 // NFTPort Info
 // ** REQUIRED **
-const AUTH = "a7b3b9e3-cd2c-4b30-9af7-cfd1c5a520be";
+const AUTH = "6486d0dd-c87c-4bb9-ab47-6a92c095accf";
 const LIMIT = 2; // Your API key rate limit
 const CONTRACT_NAME = 'Colorado CodeMedics';
 const CONTRACT_SYMBOL = 'CCM';
